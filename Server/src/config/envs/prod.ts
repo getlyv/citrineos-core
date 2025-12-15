@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 
-export function createDockerConfig() {
+export function createProdConfig() {
   return defineConfig({
     env: 'production',
     centralSystem: {
