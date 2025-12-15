@@ -8,6 +8,7 @@ import { loadSystemConfig } from './config.loader.js';
 import { createLocalConfig } from './envs/local.js';
 import { createDockerConfig } from './envs/docker.js';
 import { createDirectusConfig } from './envs/directus.docker.js';
+import { createProdConfig } from './envs/prod.js'
 
 /**
  * Get default config based on environment
@@ -21,6 +22,8 @@ function getDefaultConfig(): SystemConfig {
       return createDockerConfig();
     case 'directus':
       return createDirectusConfig();
+    case 'prod':
+      return createProdConfig();
     default:
       throw new Error(`Invalid APP_ENV "${process.env.APP_ENV}"`);
   }
