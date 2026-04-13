@@ -9,7 +9,7 @@ const MAX_LENGTH = 40;
 const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
 const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const DIGITS = '0123456789';
-const SYMBOLS = '*-_=:+|@.';
+const SYMBOLS = '*-_=:+|@.#';
 const CHARSET = [...LOWERCASE, ...UPPERCASE, ...DIGITS, ...SYMBOLS];
 
 export function generatePassword(): string {
